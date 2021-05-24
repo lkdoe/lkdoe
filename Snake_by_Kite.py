@@ -123,7 +123,7 @@ def main():
         if snake.get_head_position() == food.position:
             snake.length += 1
             food.randomize_position()
-        score = snake.length
+        score = snake.length  # Originally this had been inside the if statement above and simply counted the food eaten since start.
         snake.draw(surface)
         food.draw(surface)
         screen.blit(surface, (0, 0))
