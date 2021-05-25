@@ -68,8 +68,8 @@ class Food(object):
         self.randomize_position()
 
     def randomize_position(self):
-        self.position = (random.randint(0, GRID_WIDTH - 1) * GRIDSIZE,
-                         random.randint(0, GRID_HEIGHT - 1) * GRIDSIZE)
+        self.position = (random.randint(0, GRID_WIDTH-1) * GRIDSIZE,
+                         random.randint(0, GRID_HEIGHT-1) * GRIDSIZE)
 
     def draw(self, surface):
         r = pygame.Rect((self.position[0], self.position[1]), (GRIDSIZE, GRIDSIZE))
