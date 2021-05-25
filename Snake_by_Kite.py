@@ -15,12 +15,10 @@ class Snake(object):
         return self.positions[0]
 
     def turn(self, point):
-        if self.length > 1 and (
-                point[0] * -1, point[1] * -1) == self.direction:
+        if self.length > 1 and (point[0] * -1, point[1] * -1) == self.direction:
             return
         else:
             self.direction = point
-
 
     def move(self):
         cur = self.get_head_position()
@@ -127,7 +125,7 @@ def main():
         snake.draw(surface)
         food.draw(surface)
         screen.blit(surface, (0, 0))
-        text = myfont.render("Score {0}".format(score), 1, (0, 0, 0))
+        text = myfont.render("Score {0}".format(score), True, (0, 0, 0))
         screen.blit(text, (5, 10))
         pygame.display.update()
 
